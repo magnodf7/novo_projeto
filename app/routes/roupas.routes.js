@@ -9,7 +9,7 @@ module.exports = app => {
   
     router.get("/:id", roupas.findOne);
 
-    router.get("/flammables", roupas.findAllFlammables);
+    router.get("/flammables", roupas.findAllempromocao);
     
     router.put("/:id", roupas.update);
   

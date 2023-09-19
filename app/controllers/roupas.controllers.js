@@ -3,7 +3,7 @@ const Roupa = db.roupas;
 const Op = db.Sequelize.Op;
 
 exports.create = (req, res) => {
-    if (!req.body.name) {
+    if (!req.body.tipo) {
         res.status(400).send({
           message: "O conteúdo não pode ser vazio!"
         });
@@ -13,10 +13,10 @@ exports.create = (req, res) => {
     const roupas = {
         tipo: req.body.tipo,
         tamanho: req.body.tamanho,
-        quantity: req.body.quantity,
+        quantidade: req.body.quantidade,
         cor: req.body.cor,
         preco: req.body.preco,
-        isFlammable: req.body.isFlammable ? req.body.isFlammable : false
+        empromocao: req.body.empromocao ? req.body.empromocao : false
     };
 
     Roupa.create(roupas)
@@ -32,8 +32,8 @@ exports.create = (req, res) => {
 };
 
 exports.findAll = (req, res) => {
-    const Roupa = req.query.Roupa;
-    var condition = name ? { name: { [Op.iLike]: `%${name}%` } } : null;
+    const tipo = req.query.tipo;
+    var condition = tipo ? { tipo: { [Op.Like]: `%${tipo}%` } } : null;
   
     Roupa.findAll({ where: condition })
       .then(data => {
@@ -131,8 +131,8 @@ exports.deleteAll = (req, res) => {
         });
 };
 
-exports.findAllFlammables = (req, res) => {
-    Roupa.findAll({ where: { isFlammable: true } })
+exports.findAllempromocao = (req, res) => {
+    Roupa.findAll({ where: { empromocao: true } })
     .then(data => {
       res.send(data);
     })
