@@ -1,5 +1,6 @@
 const db = require("../models");
 const Roupa = db.roupas;
+//acho q e aqui q faco p comando de criar o banco dod clientes 
 const Op = db.Sequelize.Op;
 
 exports.create = (req, res) => {
@@ -10,7 +11,7 @@ exports.create = (req, res) => {
         return;
     }
 
-    const roupas = {
+    const dbroupas = {
         tipo: req.body.tipo,
         tamanho: req.body.tamanho,
         quantidade: req.body.quantidade,

@@ -1,5 +1,5 @@
 module.exports = app => {
-    const roupas = require("../controllers/roupas.controllers.js");
+    const roupas = require("../controllers/dbroupas.controllers.js");
   
     var router = require("express").Router();
   
@@ -9,7 +9,7 @@ module.exports = app => {
   
     router.get("/:id", roupas.findOne);
 
-    router.get("/flammables", roupas.findAllempromocao);
+    router.get("/empromocao", roupas.findAllempromocao);
     
     router.put("/:id", roupas.update);
   
