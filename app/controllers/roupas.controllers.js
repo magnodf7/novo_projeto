@@ -11,7 +11,7 @@ exports.create = (req, res) => {
         return;
     }
 
-    const dbroupas = {
+    const roupas = {
         tipo: req.body.tipo,
         tamanho: req.body.tamanho,
         quantidade: req.body.quantidade,

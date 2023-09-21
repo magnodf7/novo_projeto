@@ -15,13 +15,6 @@ module.exports = (sequelize, Sequelize) => {
     },
     empromocao: {
       type: Sequelize.BOOLEAN
-    },
-    id_cliente: {
-      type: Sequelize.INTEGER,
-      references: {
-        model: "cliente",
-        key: "id"
-      }
     }
   });
 
