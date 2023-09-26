@@ -9,7 +9,7 @@ module.exports = (sequelize, Sequelize) => {
     telefone: {
       type: Sequelize.INTEGER
     },
-    id_cliente: {
+    id_roupas: {
       type: Sequelize.INTEGER,
       references: {
         model: "roupas",
