@@ -15,6 +15,7 @@ exports.create = (req, res) => {
         nome: req.body.nome,
         tamanho: req.body.tamanho,
         telefone: req.body.telefone
+        
     };
 
     Cliente.create(clientes)

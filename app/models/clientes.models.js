@@ -7,14 +7,7 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING
     },
     telefone: {
-      type: Sequelize.INTEGER
-    },
-    id_roupas: {
-      type: Sequelize.INTEGER,
-      references: {
-        model: "roupas",
-        key: "id"
-      }
+      type: Sequelize.STRING
     }
   });
 

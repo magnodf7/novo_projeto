@@ -29,7 +29,7 @@ app.get("/", (req,res) => {
    res.json({message: 'Hello World!'}) 
 });
 
-const PORT = process.env.PORT || 8082;
+const PORT = process.env.PORT || 8088;
 app.listen(PORT, () => {
     console.log(`Server funcionando na porta ${PORT}.`);
 });

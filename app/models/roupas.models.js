@@ -11,10 +11,17 @@ module.exports = (sequelize, Sequelize) => {
     },
     cor: { type: Sequelize.STRING
     },
-    preco:{type: Sequelize.INTEGER
+    preco:{type: Sequelize.FLOAT
     },
     empromocao: {
       type: Sequelize.BOOLEAN
+    },
+    id_cliente: {
+      type: Sequelize.INTEGER,
+      references: {
+        model: "clientes",
+        key: "id"
+      }
     }
   });
 

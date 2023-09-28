@@ -17,6 +17,7 @@ exports.create = (req, res) => {
         quantidade: req.body.quantidade,
         cor: req.body.cor,
         preco: req.body.preco,
+        id_cliente: req.body.id_cliente,
         empromocao: req.body.empromocao ? req.body.empromocao : false
     };
 
